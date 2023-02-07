@@ -97,6 +97,8 @@ function GenerateForm() {
     }
   }, [decisions]);
 
+  const className = 'hover:bg-[rgba(158,197,255,0.2)] border-[rgb(158,197,255)]';
+
   return (
     <div className='h-[70%] w-full'>
 
@@ -132,10 +134,10 @@ function GenerateForm() {
             <h3>What AI is been used?</h3>
             <div className='flex justify row m-3'>
               <div>
-                <Button title={'Co:here'} handleChange={handleCohere} />
+                <Button title={'Co:here'} handleChange={handleCohere} className={className}/>
               </div>
               <div>
-                <Button title={'OpenAI'} handleChange={handleOpenAI} />
+                <Button title={'OpenAI'} handleChange={handleOpenAI} className={className}/>
               </div>
             </div>
           </div>
