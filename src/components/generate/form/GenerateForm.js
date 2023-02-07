@@ -105,7 +105,7 @@ function GenerateForm() {
       {showAnswer ? (
         <div className='h-[100vh] absolute top-0 w-[100vw] bg-[rgba(0,0,0,0.8)] flex flex-col items-center justify-center'>
           <h2>{answerValue}</h2>
-          <Button title={'next'} handleChange={handleNextQuestion} />
+          <Button title={'next'} handleChange={handleNextQuestion} className={className} />
         </div>)
         : ('')}
 
