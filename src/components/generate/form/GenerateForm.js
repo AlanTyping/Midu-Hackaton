@@ -142,8 +142,6 @@ function GenerateForm() {
               </div>
             </div>
           </div>
-          <button onClick={handleCopy}>Copiar al portapapeles</button>
-          {copied && <p>Texto copiado</p>}
         </form>
       )
         :
