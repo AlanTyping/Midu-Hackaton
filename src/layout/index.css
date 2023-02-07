@@ -64,6 +64,9 @@ body {
 }
 
 @media (max-width: 630px) {
+  .tokenize {
+    height: auto;
+  }
   .container {
     flex-direction: column;
   }
@@ -71,8 +74,12 @@ body {
     width: 100%;
   }
   .form {
-    height: 40vh;
+    max-height: 500px;
+    height: 50vh;
     width: 80%;
+  }
+  .form textarea {
+    height: 50%;
   }
   .mobile-form {
     flex-direction: column;
