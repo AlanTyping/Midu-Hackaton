@@ -23,8 +23,6 @@ function Form({ handleSubmit, handleChange, formValue, text }) {
                 className="text-white rounded-[15px] bg-[rgba(197,158,255,0.2)] p-[10px] m-[5px] border-2 border-[rgb(197,158,255)] resize-none w-[90%] h-[50%]" readOnly />
             <div className='w-[100%] relative flex flex-row items-center justify-center'>
                 <button type='submit' className=' h-[40px] hover:bg-[rgba(197,158,255,0.2)] rounded-[5px] w-[100px] border-[2px] border-[rgb(197,158,255)] m-[5px]'>Submit</button>
-                <img className='h-[20px] w-[20px] z-[10] absolute right-40 hover:cursor-pointer' src={copy} onClick={handleCopy}></img>
-                {copied && <p className='absolute right-12'>Texto copiado</p>}
             </div>
         </form>
     )
