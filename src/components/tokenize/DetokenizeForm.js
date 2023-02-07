@@ -21,9 +21,12 @@ function DetokenizeForm() {
 
     const handleSubmit = (e) => {
         setArray((array) => array = toNumberArray(text.text));
-        detokenizeData(array, setFormValue);
         e.preventDefault()
     }
+
+    useEffect(() => {
+        detokenizeData(array, setFormValue);
+    }, [array])
 
     const handleCopy = async () => {
         try {

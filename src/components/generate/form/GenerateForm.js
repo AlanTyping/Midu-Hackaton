@@ -1,16 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, createContext } from 'react';
 import { GenerateData } from '../../../API/cohere';
 import { callApi } from '../../../API/openAI';
 import Button from '../../Button.js';
-import copy from './copy.png';
 
-function GenerateForm() {
+function GenerateForm({decisions, setDecisions}) {
   const [waitingState, setWaitingState] = useState(false);
   const [showFinalResult, setShowFinalResult] = useState(false);
   const [answerValue, setAnswerValue] = useState('');
   const [showAnswer, setShowAnswer] = useState(false);
   const [correctAnswers, setCorrectAnswers] = useState(0);
-  const [decisions, setDecisions] = useState(0);
   const [userDecision, setUserDecision] = useState('');
   const [showResults, setShowResults] = useState(false);
   const [currentCall, setCurrentCall] = useState('');
@@ -100,8 +98,7 @@ function GenerateForm() {
   const className = 'hover:bg-[rgba(158,197,255,0.2)] border-[rgb(158,197,255)]';
 
   return (
-    <div className='h-[70%] w-full'>
-
+    <div className='h-[100%] w-full flex justify-center items-center flex-col'>
       {showAnswer ? (
         <div className='h-[100vh] absolute top-0 w-[100vw] bg-[rgba(0,0,0,0.8)] flex flex-col items-center justify-center'>
           <h2>{answerValue}</h2>
@@ -115,30 +112,27 @@ function GenerateForm() {
           <h2>{(correctAnswers > 3) ? `Congratulations, you win!` : `Game over`}</h2>
           <Button title={'finish'} handleChange={handleEnd} className={className} />
         </div>
-      </div>) : ('')}
-      <div className='w-[80%] flex items-center justify-end m-[20px] ml-[0px]'>
-        <h3 className='text-[1.3rem] p-[5px] '>answer: {decisions}/6</h3>
-      </div>
-      {waitingState ? 
-            (<div className='h-[100vh] text-[2rem] absolute top-0 w-[100vw] bg-[rgba(0,0,0,0.8)] flex flex-col items-center justify-center'>
-              <h3>Waiting for data</h3>
-              <h4>Estimated time: 10 seconds{` :')`}</h4>
-              <img className='h-[200px] w-[300px] cover' src='https://media.giphy.com/media/W2zHeb2KFvtXugWbJc/giphy-downsized-large.gif'></img>
-            </div>) : '' }
+      </div>) : ''}
+      {waitingState ?
+        (<div className='h-[100vh] text-[2rem] absolute top-0 w-[100vw] bg-[rgba(0,0,0,0.8)] flex flex-col items-center justify-center'>
+          <h3>Waiting for data</h3>
+          <h4>Estimated time: 10 seconds{` :')`}</h4>
+          <img className='h-[200px] w-[300px] cover' src='https://media.giphy.com/media/W2zHeb2KFvtXugWbJc/giphy-downsized-large.gif'></img>
+        </div>) : ''}
       {showResults ? (
         <form className='h-[100%] w-full flex flex-col items-center'>
           <label className='form-title'>Insert Text</label><br />
           <input autocomplete="off" type="text" name="text" value={text.text} onChange={handleChange} className="text-white rounded-[10px] bg-[rgba(158,197,255,0.2)] border-[rgb(158,197,255)] p-[10px] m-[5px] border-2 w-[40%]" /><br />
           <label className='form-description'>Result</label>
           <textarea type="text" name="token" autoComplete="off" spellCheck="false" value={formValue} rows="3" className="text-white rounded-[15px]  p-[10px] m-[5px] border-2 bg-[rgba(158,197,255,0.2)] border-[rgb(158,197,255)] resize-none w-[50%] h-[500px]" readOnly />
-          <div className='flex flex-col justify-center items-center w-full'>
+          <div className='flex flex-col justify-center items-center alr w-full'>
             <h3>What AI is been used?</h3>
             <div className='flex justify row m-3'>
               <div>
-                <Button title={'Co:here'} handleChange={handleCohere} className={className}/>
+                <Button title={'Co:here'} handleChange={handleCohere} className={className} />
               </div>
               <div>
-                <Button title={'OpenAI'} handleChange={handleOpenAI} className={className}/>
+                <Button title={'OpenAI'} handleChange={handleOpenAI} className={className} />
               </div>
             </div>
           </div>
@@ -146,7 +140,7 @@ function GenerateForm() {
       )
         :
         (
-          <form onSubmit={handleSubmit} className='h-[100%] w-full flex flex-col items-center'>
+          <form onSubmit={handleSubmit} className='h-[100%] w-[80%] flex flex-col items-center '>
             <label className='form-title'>Insert Text</label><br />
             <input autocomplete="off" type="text" placeholder='Request something' name="text" value={text.text} onChange={handleChange} className="text-white rounded-[10px] bg-[rgba(158,197,255,0.2)] border-[rgb(158,197,255)] p-[10px] m-[5px] border-2  w-[40%]" /><br />
             <label className='form-description'>Result</label>

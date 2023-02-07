@@ -28,7 +28,8 @@ body {
 .swiper {
   min-width: 250px;
   width: 20%;
-  height: 420px;
+  height: 70vh;
+  min-height: 400px;
 }
 
 .presentacion {
