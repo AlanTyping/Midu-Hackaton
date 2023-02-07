@@ -127,9 +127,9 @@ function GenerateForm() {
       {showResults ? (
         <form className='h-[100%] w-full flex flex-col items-center'>
           <label className='form-title'>Insert Text</label><br />
-          <input type="text" name="text" value={text.text} onChange={handleChange} className="text-white rounded-[10px] bg-[rgba(197,158,255,0.2)] p-[10px] m-[5px] border-2 border-[rgb(197,158,255)] w-[40%]" /><br />
+          <input type="text" name="text" value={text.text} onChange={handleChange} className="text-white rounded-[10px] bg-[rgba(158,197,255,0.2)] border-[rgb(158,197,255)] p-[10px] m-[5px] border-2 w-[40%]" /><br />
           <label className='form-description'>Result</label>
-          <textarea type="text" name="token" autoComplete="off" spellCheck="false" value={formValue} rows="3" className="text-white rounded-[15px] bg-[rgba(197,158,255,0.2)] p-[10px] m-[5px] border-2 border-[rgb(197,158,255)] resize-none w-[50%] h-[500px]" readOnly />
+          <textarea type="text" name="token" autoComplete="off" spellCheck="false" value={formValue} rows="3" className="text-white rounded-[15px]  p-[10px] m-[5px] border-2 bg-[rgba(158,197,255,0.2)] border-[rgb(158,197,255)] resize-none w-[50%] h-[500px]" readOnly />
           <div className='flex flex-col justify-center items-center w-full'>
             <h3>What AI is been used?</h3>
             <div className='flex justify row m-3'>
@@ -149,10 +149,10 @@ function GenerateForm() {
         (
           <form onSubmit={handleSubmit} className='h-[100%] w-full flex flex-col items-center'>
             <label className='form-title'>Insert Text</label><br />
-            <input type="text" name="text" value={text.text} onChange={handleChange} className="text-white rounded-[10px] bg-[rgba(197,158,255,0.2)] p-[10px] m-[5px] border-2 border-[rgb(197,158,255)] w-[40%]" /><br />
+            <input type="text" name="text" value={text.text} onChange={handleChange} className="text-white rounded-[10px] bg-[rgba(158,197,255,0.2)] border-[rgb(158,197,255)] p-[10px] m-[5px] border-2  w-[40%]" /><br />
             <label className='form-description'>Result</label>
-            <textarea type="text" name="token" autoComplete="off" spellCheck="false" value={formValue} rows="3" className="text-white rounded-[15px] bg-[rgba(197,158,255,0.2)] p-[10px] m-[5px] border-2 border-[rgb(197,158,255)] resize-none w-[50%] h-[50%]" readOnly />
-            <button type='submit' className='h-[50px] w-[100px] border-[2px] border-[#c59eff] m-[10px]'>Submit</button>
+            <textarea type="text" name="token" autoComplete="off" spellCheck="false" value={formValue} rows="3" className="text-white rounded-[15px] bg-[rgba(158,197,255,0.2)] border-[rgb(158,197,255)] p-[10px] m-[5px] border-2  resize-none w-[50%] h-[50%]" readOnly />
+            <button type='submit' className='h-[50px] w-[100px] border-[2px] hover:bg-[rgba(158,197,255,0.2)] border-[rgb(158,197,255)] m-[10px]'>Submit</button>
           </form>
         )}
     </div>
