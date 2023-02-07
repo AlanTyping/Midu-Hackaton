@@ -42,3 +42,11 @@ body {
 .swiper-slide:nth-child(3n) {
   background-color: #0d1117;
 }
+
+@media (max-width: 600px) {
+  .mobile-form {
+    flex-direction: column;
+    height: 70vh;
+    background-color:green;
+  }
+}

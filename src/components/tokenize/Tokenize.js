@@ -9,7 +9,7 @@ function Tokenize({setTokenize}) {
   return (
     <div className='h-[100vh] w-[100%] bg-black flex items-center flex-col'>
       <Header title={'Tokenize'} />
-      <div className='h-full w-full flex flex-row items-center'>
+      <div className='h-full w-full flex flex-row items-center mobile-form'>
         <TokenizeForm /> 
         <DetokenizeForm />
       </div>

@@ -19,17 +19,3 @@ function Card({title, description}) {
 }
 
 export default Card
-
-// {CardProps.map((e) => {
-//   <SwiperSlide>
-//     <Card
-//       title={e.title}
-//       description={e.description}
-//     />
-//   </SwiperSlide>
-//  })} 
-
-//  const CardPropts = [{
-//   title: 'Tokenize',
-//   description: 'Do you ever wanted to chat with a friend in an encoded lenguaje? This, is an amazing tool that allows you to encode and decodesome text sentences!'
-// }]
