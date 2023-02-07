@@ -2,6 +2,8 @@ import React, {useContext} from 'react';
 import Button from '../../Button';
 import { Context } from '../../../App';
 
+const className = 'absolute bottom-2'
+
 function Card({title, description}) {
   const [{ setTokenize }, { setGenerate }] = useContext(Context)
   const handleChange = () => {
@@ -11,9 +13,9 @@ function Card({title, description}) {
     
   return (
     <div className='h-[100%] w-[100%] flex flex-col justify-center items-center'>
-        <h1>{title}</h1>
-        <h3>{description}</h3>
-        <Button handleChange={handleChange} title={'open'} />
+        <h1 className='text-[1.5rem] flex items-center w-full justify-center absolute top-5 bg-green-700' >{title}</h1>
+        <h3 className='text-[1.2rem] flex items-center w-full justify-center p-[20px]' >{description}</h3>
+        <Button className={className} handleChange={handleChange} title={'open'} />
     </div>
   )
 }

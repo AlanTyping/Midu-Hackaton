@@ -31,7 +31,6 @@ function App() {
   return (
     <Context.Provider value={[{setTokenize}, {setGenerate}]}>
       <div className="h-screen w-full flex flex-col items-center">
-        <Header title={'AI entertainment'} />
         <Presentation />
         <Cards />
       </div>
