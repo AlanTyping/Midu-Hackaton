@@ -22,4 +22,4 @@ function Tokenize({ setTokenize }) {
   )
 }
 
-export default Tokenize
+export default Tokenize 

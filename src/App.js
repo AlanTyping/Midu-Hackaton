@@ -14,8 +14,6 @@ function App() {
   const [generate, setGenerate] = useState(false);
   const [BB, showBB] = useState(false);
 
-  console.log(process.env.REACT_APP_KEY)
-
   if (tokenize) {
     return (
       <Tokenize setTokenize={setTokenize} />
