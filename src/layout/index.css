@@ -10,6 +10,16 @@
   box-sizing: border-box;
 }
 
+.form-title {
+  font-family: Oswald;
+  font-size: 1.8rem;
+}
+
+.form-description {
+  font-family: Oswald;
+  font-size: 1.5rem;
+}
+
 body {
   background-color: #0d1117;
   color: white;
@@ -48,7 +58,22 @@ body {
   background-color: #0d1117;
 }
 
+#card-description {
+  font-family: Moon, sans-serif;
+  font-size: 1.3rem;
+}
+
 @media (max-width: 630px) {
+  .container {
+    flex-direction: column;
+  }
+  .form-container {
+    width: 100%;
+  }
+  .form {
+    height: 40vh;
+    width: 80%;
+  }
   .mobile-form {
     flex-direction: column;
     height: 70vh;
@@ -56,12 +81,13 @@ body {
   }
   .swiper {
     height: 70vh;
+    max-height: 500px;
   }
   #titulo {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   #subtitulo {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     padding-left: 40px;
   }
 }

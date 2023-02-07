@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { tokenizeData } from "../../API/cohere";
+import Form from "./Form";
 
 function TokenizeForm() {
   const [text, setText] = useState({ text: '' });
@@ -13,10 +14,11 @@ function TokenizeForm() {
     })
   }
 
-  const handleSubmit = (e) => {
-    tokenizeData(text, setFormValue);
-    e.preventDefault();
-  };
+  const object = {
+    title: 'Insert Text',
+    description: 'Text to tokens',
+    placeholder: 'write some text...'
+  }
 
   const handleCopy = (e) => {
     try {
@@ -28,17 +30,14 @@ function TokenizeForm() {
     e.preventDefault();
   };
 
+  const handleSubmit = (e) => {
+    tokenizeData(text, setFormValue);
+    e.preventDefault();
+  };
+
   return (
-    <div className="h-[70%] w-full flex flex-col justify-center items-center bg-green-800">
-      <form onSubmit={handleSubmit} className='h-[400px] w-[50%] min-w-[300px] flex flex-col justify-center items-center bg-blue-800'>
-        <label>Insert Text</label><br />
-        <input type="text" name="text" onChange={handleChange} className="text-stone-800" /><br />
-        <label>Result</label>
-        <textarea type="text" name="token" autoComplete="off" spellCheck="false" value={formValue} rows="3" className="text-stone-800 resize-none" readOnly />
-        <button type='submit'>Submit</button>
-        <button onClick={handleCopy}>Copiar al portapapeles</button>
-        {copied && <p>Texto copiado</p>}
-      </form>
+    <div className="flex w-[50%] h-[70%] justify-center items-center form-container">
+      <Form text={object} handleChange={handleChange} handleSubmit={handleSubmit} formValue={formValue} handleCopy={handleCopy} copied={copied} />
     </div>
   )
 }

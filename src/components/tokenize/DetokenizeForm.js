@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { detokenizeData } from "../../API/cohere";
+import Form from "./Form";
 
 function DetokenizeForm() {
     const [text, setText] = useState({ text: '' });
@@ -33,16 +34,16 @@ function DetokenizeForm() {
         }
     };
 
+    const object = {
+        title: 'Insert Tokens',
+        description: 'Tokens to text',
+        placeholder: 'Paste your tokens'
+      }
+
     return (
-        <form onSubmit={handleSubmit} className='h-[70%] w-full flex flex-col items-center'>
-            <label>Insert Text</label><br />
-            <input type="text" name="text" onChange={handleChange} className="text-stone-800" /><br />
-            <label>Result</label>
-            <textarea type="text" name="token" autoComplete="off" spellCheck="false" value={formValue} rows="3" className="text-stone-800 resize-none" readOnly />
-            <button type='submit'>Submit</button>
-            <button onClick={handleCopy}>Copiar al portapapeles</button>
-            {copied && <p>Texto copiado</p>}
-        </form>
+        <div className="flex w-[50%] h-[70%] justify-center items-center form-container">
+            <Form text={object} handleChange={handleChange} handleSubmit={handleSubmit} formValue={formValue} handleCopy={handleCopy} copied={copied} />
+        </div>
     )
 }
 

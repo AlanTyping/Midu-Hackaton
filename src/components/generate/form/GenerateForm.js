@@ -28,10 +28,12 @@ function GenerateForm() {
   const randomCall = () => {
     const resultado = Math.random();
     if (resultado > 0.5) {
+      alert("now, i'm calling to opeinAI")
       setCurrentCall((call) => call = 'openAI');
       callApi(text, setFormValue, setShowResults, setWaitingState)
     }
     if (resultado < 0.5) {
+      alert("now, i'm calling to co:here")
       setCurrentCall((call) => call = 'co:here');
       GenerateData(text, setFormValue, setShowResults, setWaitingState);
     }
