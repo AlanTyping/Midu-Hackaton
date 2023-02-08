@@ -2,8 +2,9 @@ import React, { useState, useEffect, createContext } from 'react';
 import { GenerateData } from '../../../API/cohere';
 import { callApi } from '../../../API/openAI';
 import Button from '../../Button.js';
+import Form from './form/form';
 
-function GenerateForm({decisions, setDecisions}) {
+function GenerateForm({ decisions, setDecisions }) {
   const [waitingState, setWaitingState] = useState(false);
   const [showFinalResult, setShowFinalResult] = useState(false);
   const [answerValue, setAnswerValue] = useState('');
@@ -120,34 +121,10 @@ function GenerateForm({decisions, setDecisions}) {
           <img className='h-[200px] w-[300px] cover' src='https://media.giphy.com/media/W2zHeb2KFvtXugWbJc/giphy-downsized-large.gif'></img>
         </div>) : ''}
       {showResults ? (
-        <form className='h-[100%] w-full flex flex-col items-center'>
-          <label className='form-title'>Insert Text</label><br />
-          <input autocomplete="off" type="text" name="text" value={text.text} onChange={handleChange} className="text-white rounded-[10px] bg-[rgba(158,197,255,0.2)] border-[rgb(158,197,255)] p-[10px] m-[5px] border-2 w-[40%]" /><br />
-          <label className='form-description'>Result</label>
-          <textarea type="text" name="token" autoComplete="off" spellCheck="false" value={formValue} rows="3" className="text-white rounded-[15px]  p-[10px] m-[5px] border-2 bg-[rgba(158,197,255,0.2)] border-[rgb(158,197,255)] resize-none w-[50%] h-[500px]" readOnly />
-          <div className='flex flex-col justify-center items-center alr w-full'>
-            <h3>What AI is been used?</h3>
-            <div className='flex justify row m-3'>
-              <div>
-                <Button title={'Co:here'} handleChange={handleCohere} className={className} />
-              </div>
-              <div>
-                <Button title={'OpenAI'} handleChange={handleOpenAI} className={className} />
-              </div>
-            </div>
-          </div>
-        </form>
+        <Form handleSubmit={handleSubmit} text={text.text} handleChange={handleChange} showResults={showResults} formValue={formValue} handleOpenAI={handleOpenAI} handleCohere={handleCohere} />
       )
         :
-        (
-          <form onSubmit={handleSubmit} className='h-[100%] w-[80%] flex flex-col items-center '>
-            <label className='form-title'>Insert Text</label><br />
-            <input autocomplete="off" type="text" placeholder='Request something' name="text" value={text.text} onChange={handleChange} className="text-white rounded-[10px] bg-[rgba(158,197,255,0.2)] border-[rgb(158,197,255)] p-[10px] m-[5px] border-2  w-[40%]" /><br />
-            <label className='form-description'>Result</label>
-            <textarea type="text" placeholder='Cohere or openAI? Submit for the answer' name="token" autoComplete="off" spellCheck="false" value={formValue} rows="3" className="text-white rounded-[15px] bg-[rgba(158,197,255,0.2)] border-[rgb(158,197,255)] p-[10px] m-[5px] border-2  resize-none w-[50%] h-[50%]" readOnly />
-            <button type='submit' className='h-[50px] w-[100px] border-[2px] hover:bg-[rgba(158,197,255,0.2)] border-[rgb(158,197,255)] m-[10px]'>Submit</button>
-          </form>
-        )}
+        (<Form handleSubmit={handleSubmit} text={text.text} handleChange={handleChange} formValue={formValue} />)}
     </div>
   )
 }

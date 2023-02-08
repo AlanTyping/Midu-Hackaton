@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Header from '../header/Header';
 import Button from '../Button';
-import GenerateForm from './form/GenerateForm';
+import GenerateForm from './forms/GenerateForm';
 
 function Generate({ setGenerate }) {
     const handleChange = () => setGenerate((generate) => !generate);
