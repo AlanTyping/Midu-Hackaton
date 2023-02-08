@@ -10,11 +10,10 @@
   box-sizing: border-box;
 }
 
-.background {
+body {
   background: linear-gradient(334deg, #f77b6b, #2551e2, #13f7f7);
 	background-size: 180% 180%;
 	animation: gradient-animation 6s ease infinite;
-  background-color: rgba(0,0,0,0.8);
 }
 
 @keyframes gradient-animation {

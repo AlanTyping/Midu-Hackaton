@@ -15,7 +15,7 @@ function Tokenize({ setTokenize }) {
         <div className='w-[80%] h-[70px] flex items-center justify-start m-[20px] ml-[0px]'>
           <Button title={'home'} handleChange={handleChange} className={className} />
         </div>
-        <div className='h-[100vh] w-full flex flex-row items-center container'>
+        <div className='h-[120vh] w-full flex flex-row items-center container'>
           <TokenizeForm />
           <DetokenizeForm />
         </div>
