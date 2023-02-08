@@ -10,13 +10,15 @@ function Tokenize({ setTokenize }) {
   const className = ' hover:bg-[rgba(197,158,255,0.2)]'
 
   return (
-    <div className='h-[100vh] w-[100%] bg-black flex items-center flex-col tokenize'>
-      <div className='w-[80%] h-[70px] flex items-center justify-start m-[20px] ml-[0px]'>
-        <Button title={'home'} handleChange={handleChange} className={className} />
-      </div>
-      <div className='h-[100vh] w-full flex flex-row items-center container'>
-        <TokenizeForm />
-        <DetokenizeForm />
+    <div className='background h-[100vh] w-[100vw]'>
+      <div className='bg-[rgba(0,0,0,0.6)] h-[100vh] w-[100%] flex items-center flex-col tokenize'>
+        <div className='w-[80%] h-[70px] flex items-center justify-start m-[20px] ml-[0px]'>
+          <Button title={'home'} handleChange={handleChange} className={className} />
+        </div>
+        <div className='h-[100vh] w-full flex flex-row items-center container'>
+          <TokenizeForm />
+          <DetokenizeForm />
+        </div>
       </div>
     </div>
   )

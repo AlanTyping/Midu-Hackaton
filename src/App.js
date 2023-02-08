@@ -27,10 +27,12 @@ function App() {
   }
 
   return (
-    <Context.Provider value={[{setTokenize}, {setGenerate}]}>
-      <div className="h-screen w-full flex flex-col items-center">
-        <Presentation />
-        <Cards />
+    <Context.Provider value={[{ setTokenize }, { setGenerate }]}>
+      <div className='background h-[100vh] w-[100vw]'>
+        <div className="h-screen w-full bg-[rgba(0,0,0,0.6)] flex flex-col items-center app">
+          <Presentation />
+          <Cards />
+        </div>
       </div>
     </Context.Provider>
   );
