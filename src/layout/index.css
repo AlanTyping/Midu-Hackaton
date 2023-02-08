@@ -89,6 +89,7 @@ body {
   }
   .container {
     flex-direction: column;
+    height: 150vh;
   }
   .form-container {
     width: 100%;
