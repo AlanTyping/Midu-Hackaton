@@ -6,7 +6,7 @@ function Form({ handleSubmit, text, formValue, handleChange, showResults, handle
 
     const textarea = 'text-white rounded-[15px] min-w-[300px] min-h-[200px] bg-[rgba(158,197,255,0.2)] border-[rgb(158,197,255)] p-[10px] m-[5px] border-2  resize-none w-[50%] h-[50%]';
 
-    const input = 'text-white min-w-[300px] rounded-[10px] bg-[rgba(158,197,255,0.2)] border-[rgb(158,197,255)] p-[10px] m-[5px] mt-[0px] border-2 w-[40%]';
+    const input = 'text-white min-w-[300px] rounded-[10px] bg-[rgba(158,197,255,0.2)] border-[rgb(158,197,255)] p-[10px] m-[5px] border-2 w-[40%]';
 
     return (
         <div className='h-[100%] w-[80%] flex flex-col justify-center items-center'>
