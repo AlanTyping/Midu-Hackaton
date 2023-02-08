@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../../../Button'
+import Button from '../../Button';
 
 function Form({ handleSubmit, text, formValue, handleChange, showResults, handleCohere, handleOpenAI }) {
     const className = 'hover:bg-[rgba(158,197,255,0.2)] border-[rgb(158,197,255)]';

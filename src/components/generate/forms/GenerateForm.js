@@ -1,8 +1,8 @@
 import React, { useState, useEffect, createContext } from 'react';
 import { GenerateData } from '../../../API/cohere';
 import { callApi } from '../../../API/openAI';
-import Button from '../../Button.js';
-import Form from './form/form';
+import Button from '../../Button';
+import Form from '../form/form';
 
 function GenerateForm({ decisions, setDecisions }) {
   const [waitingState, setWaitingState] = useState(false);
@@ -99,8 +99,7 @@ function GenerateForm({ decisions, setDecisions }) {
   const className = 'hover:bg-[rgba(158,197,255,0.2)] border-[rgb(158,197,255)]';
 
   return (
-    <div className='background h-[100vh] w-[100vw]'>
-      <div className='h-[100%] w-full flex justify-center items-center flex-col bg-[rgba(0,0,0,0.6)]'>
+      <div className='h-[100%] w-full flex justify-center items-center flex-col '>
       {showAnswer ? (
         <div className='h-[100vh] absolute top-0 w-[100vw] bg-[rgba(0,0,0,0.8)] flex flex-col items-center justify-center'>
           <h2>{answerValue}</h2>
@@ -127,8 +126,6 @@ function GenerateForm({ decisions, setDecisions }) {
         :
         (<Form handleSubmit={handleSubmit} text={text.text} handleChange={handleChange} formValue={formValue} />)}
     </div>
-    </div>
-    
   )
 }
 
