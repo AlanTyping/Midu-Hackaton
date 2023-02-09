@@ -21,11 +21,15 @@
   font-size: 3.5rem;
 }
 
+.barlow-family {
+  font-family: Barlow;
+}
+
 #subtitulo {
   font-family: Barlow;
 }
 
-body {
+.background {
   background: linear-gradient(334deg, #f77b6b, #2551e2, #13f7f7);
 	background-size: 180% 180%;
 	animation: gradient-animation 6s ease infinite;
@@ -43,6 +47,9 @@ body {
 	}
 }
 
+#card-description {
+  font-size: 1.2rem;
+}
 
 .form-title {
   font-family: Oswald;
@@ -93,11 +100,6 @@ body {
   background-color: #0d1117;
 }
 
-#card-description {
-  font-family: Moon, sans-serif;
-  font-size: 1.3rem;
-}
-
 @media (max-width: 630px) {
   .tokenize {
     height: auto;
@@ -123,15 +125,15 @@ body {
     background-color:green;
   }
   .swiper {
-    height: 70vh;
+    height: 50vh;
     max-height: 500px;
   }
   #titulo {
-    font-size: 2rem;
+    font-size: 2.3rem;
   }
   #subtitulo {
-    font-size: 1.4rem;
-    padding-left: 40px;
+    font-size: 1.6rem;
+    padding-left: 30px;
   }
   #headerTitle {
     margin-left: 10px;
