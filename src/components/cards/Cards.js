@@ -13,7 +13,7 @@ import Tokenize from '../tokenize/Tokenize';
 
  const CardProps = [{
   title: 'Tokenize',
-  description: 'Do you ever wanted to chat with a friend, using an encoded lenguaje? This, is an amazing tool that allows you to encode and decode some text sentences!'
+  description: 'Do you ever wanted to chat, using encoded lenguaje? This, is an amazing tool that allows you to encode and decode some text sentences'
 },{
   title: 'Co:here or Open AI?',
   description: 'This, is a little game that allows you to pass throw some fun moments by trying to guess what AI tecnology are you using to'

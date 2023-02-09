@@ -4,10 +4,23 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Moon+Dance&family=Oswald:wght@200&family=Rajdhani&family=Rubik:wght@300&display=swap');
 
+:root {
+  --card: rgba(0,0,0,0.9);
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+
+#titulo {
+  font-family: sans-serif;
+}
+
+#subtitulo {
+
 }
 
 body {
@@ -47,7 +60,7 @@ body {
 .swiper {
   min-width: 250px;
   width: 20%;
-  height: 70vh;
+  height: 60vh;
   min-height: 400px;
 }
 
@@ -67,11 +80,11 @@ body {
 }
 
 .swiper-slide:nth-child(1n) {
-  background-color: #0d1117;
+  background-color: var(--card);
 }
 
 .swiper-slide:nth-child(2n) {
-  background-color: #0d1117;
+  background-color: var(--card);
 }
 
 .swiper-slide:nth-child(3n) {
@@ -89,7 +102,7 @@ body {
   }
   .container {
     flex-direction: column;
-    height: 150vh;
+    height: 130vh;
   }
   .form-container {
     width: 100%;

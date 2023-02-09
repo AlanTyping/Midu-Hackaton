@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import Button from '../Button';
 import { Context } from '../../App';
 
-const className = 'absolute bottom-2'
+const className = 'absolute bottom-2 hover:bg-[rgb(15,35,73)]'
 
 function Card({title, description}) {
   const [{ setTokenize }, { setGenerate }] = useContext(Context)
@@ -12,8 +12,8 @@ function Card({title, description}) {
   };  
     
   return (
-    <div className='h-[100%] w-[100%] flex flex-col justify-center items-center'>
-        <h1 className='text-[1.5rem] flex items-center w-full justify-center absolute top-7 bg-green-700' >{title}</h1>
+    <div className='h-[100%] w-[100%] flex flex-col justify-center items-center card'>
+        <h1 className='text-[1.5rem] flex items-center w-full justify-center absolute top-7 bg-blue-700' >{title}</h1>
         <h3 className='text-[1.1rem] flex items-center justify-center p-[20px]' id='card-description' >{description}</h3>
         <Button className={className} handleChange={handleChange} title={'open'} />
     </div>
