@@ -16,7 +16,7 @@ function Form({ handleSubmit, text, formValue, handleChange, showResults, handle
                     <input autoComplete="off" type="text" name="text" value={text} onChange={handleChange} className={input} /><br />
                     <label className='form-description'>Result</label>
                     <textarea type="text" name="token" autoComplete="off" spellCheck="false" value={formValue} rows="3"
-                      className={textarea} readOnly />
+                        className={textarea} readOnly />
                     <div className='flex flex-col justify-center items-center alr w-full'>
                         <h3>What AI is been used?</h3>
                         <div className='flex justify row m-3'>
@@ -35,9 +35,8 @@ function Form({ handleSubmit, text, formValue, handleChange, showResults, handle
                     <input autoComplete="off" type="text" placeholder='Request something' name="text" value={text} onChange={handleChange} className={input} /><br />
                     <label className='form-description'>Result</label>
                     <textarea type="text" placeholder='Cohere or openAI? Submit for the answer' name="token" autoComplete="off" spellCheck="false" value={formValue} rows="3" className={textarea} readOnly />
-                    <button type='submit' className='h-[50px] w-[100px] border-[2px] hover:bg-[rgba(158,197,255,0.2)] border-[rgb(158,197,255)] m-[10px]'>Submit</button>
+                    <button type='submit' className='h-[50px] relative w-[100px] border-[2px] hover:bg-[rgba(158,197,255,0.2)] border-[rgb(158,197,255)] m-[10px]'>Submit</button>
                 </form>
-
             )}
         </div>
 

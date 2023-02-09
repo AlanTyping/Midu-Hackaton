@@ -10,7 +10,7 @@ function Generate({ setGenerate }) {
 
     return (
         <div className='background h-[100vh] w-[100vw]'>
-            <div className='h-[100vh] w-[100%] bg-[rgba(0,0,0,0.7)] flex items-center flex-col'>
+            <div className='h-[100%] w-[100%] bg-[rgba(0,0,0,0.7)] flex items-center flex-col'>
                 <Header title={'Co:here or Open AI?'} />
                 <div className='h-[100vh] w-full flex flex-col items-center'>
                     <div className='w-[80%] h-[70px] relative flex items-center justify-start m-[20px] ml-[0px]'>
