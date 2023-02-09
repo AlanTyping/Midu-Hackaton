@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Moon+Dance&family=Oswald:wght@200&family=Rajdhani&family=Rubik:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap');
 
 :root {
   --card: rgba(0,0,0,0.9);
@@ -16,11 +17,12 @@
 
 
 #titulo {
-  font-family: sans-serif;
+  font-family: Barlow;
+  font-size: 3.5rem;
 }
 
 #subtitulo {
-
+  font-family: Barlow;
 }
 
 body {
