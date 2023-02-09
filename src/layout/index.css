@@ -109,7 +109,7 @@ body {
   }
   .container {
     flex-direction: column;
-    height: 140vh;
+    height: 150vh;
   }
   .form-container {
     width: 100%;
@@ -128,7 +128,7 @@ body {
     background-color:green;
   }
   .swiper {
-    height: 50vh;
+    height: 40vh;
     max-height: 500px;
   }
   #titulo {
