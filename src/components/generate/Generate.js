@@ -9,7 +9,7 @@ function Generate({ setGenerate }) {
     const [decisions, setDecisions] = useState(0);
 
     return (
-        <div className='background h-[100vh] w-[100vw]'>
+        <div className='background generate h-[100vh] w-[100vw]'>
             <div className='h-[100%] w-[100%] bg-[rgba(0,0,0,0.7)] flex items-center flex-col'>
                 <Header title={'Co:here or Open AI?'} />
                 <div className='h-[100vh] w-full flex flex-col items-center'>

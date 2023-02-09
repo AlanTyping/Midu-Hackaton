@@ -101,6 +101,9 @@ body {
 }
 
 @media (max-width: 630px) {
+  .generate {
+    height: 110vh;
+  }
   .tokenize {
     height: auto;
   }
@@ -132,7 +135,7 @@ body {
     font-size: 2.3rem;
   }
   #subtitulo {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     padding-left: 30px;
   }
   #headerTitle {
