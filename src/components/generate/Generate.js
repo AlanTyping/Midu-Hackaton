@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Header from '../header/Header';
 import Button from '../Button';
-import GenerateForm from './forms/GenerateForm';
+import GenerateForms from './forms/GenerateForms';
 
 function Generate({ setGenerate }) {
     const handleChange = () => setGenerate((generate) => !generate);
@@ -17,7 +17,7 @@ function Generate({ setGenerate }) {
                         <Button handleChange={handleChange} title={'come back'} className={className} />
                         <span className='absolute right-5 text-[1.3rem]'>answer: {decisions}/6</span>
                     </div>
-                    <GenerateForm decisions={decisions} setDecisions={setDecisions} />
+                    <GenerateForms decisions={decisions} setDecisions={setDecisions} />
                 </div>
             </div>
         </div>

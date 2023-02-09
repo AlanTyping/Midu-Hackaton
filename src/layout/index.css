@@ -101,6 +101,10 @@ body {
 }
 
 @media (max-width: 630px) {
+  .waiting {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
   .generate {
     height: 110vh;
   }

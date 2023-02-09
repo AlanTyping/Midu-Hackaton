@@ -3,8 +3,12 @@ import { GenerateData } from '../../../API/cohere';
 import { callApi } from '../../../API/openAI';
 import Button from '../../Button';
 import Form from '../form/form';
+import Waiting from './components/Waiting';
+import FinalResult from './components/FinalResult';
+import ShowAnswers from './components/ShowAnswers';
+import ShowResults from './components/ShowResults';
 
-function GenerateForm({ decisions, setDecisions }) {
+function GenerateForms({ decisions, setDecisions }) {
   const [waitingState, setWaitingState] = useState(false);
   const [showFinalResult, setShowFinalResult] = useState(false);
   const [answerValue, setAnswerValue] = useState('');
@@ -99,34 +103,13 @@ function GenerateForm({ decisions, setDecisions }) {
   const className = 'hover:bg-[rgba(158,197,255,0.2)] border-[rgb(158,197,255)]';
 
   return (
-      <div className='h-[100%] w-full flex justify-center items-center flex-col '>
-      {showAnswer ? (
-        <div className='h-[100vh] absolute top-0 w-[100vw] bg-[rgba(0,0,0,0.8)] flex flex-col items-center justify-center'>
-          <h2>{answerValue}</h2>
-          <Button title={'next'} handleChange={handleNextQuestion} className={className} />
-        </div>)
-        : ('')}
-
-      {showFinalResult ? (<div>
-        <div className='h-[100vh] absolute top-0 w-[100vw] bg-[rgba(0,0,0,0.8)] flex flex-col items-center justify-center'>
-          <h3>{correctAnswers}/6</h3>
-          <h2>{(correctAnswers > 3) ? `Congratulations, you win!` : `Game over`}</h2>
-          <Button title={'finish'} handleChange={handleEnd} className={className} />
-        </div>
-      </div>) : ''}
-      {waitingState ?
-        (<div className='h-[100vh] text-[2rem] absolute top-0 w-[100vw] bg-[rgba(0,0,0,0.8)] flex flex-col items-center justify-center'>
-          <h3>Waiting for data</h3>
-          <h4>Estimated time: 10 seconds{` :')`}</h4>
-          <img className='h-[200px] w-[300px] cover' src='https://media.giphy.com/media/W2zHeb2KFvtXugWbJc/giphy-downsized-large.gif'></img>
-        </div>) : ''}
-      {showResults ? (
-        <Form handleSubmit={handleSubmit} text={text.text} handleChange={handleChange} showResults={showResults} formValue={formValue} handleOpenAI={handleOpenAI} handleCohere={handleCohere} />
-      )
-        :
-        (<Form handleSubmit={handleSubmit} text={text.text} handleChange={handleChange} formValue={formValue} />)}
+    <div className='h-[100%] w-full flex justify-center items-center flex-col '>
+      <ShowAnswers answerValue={answerValue} showAnswer={showAnswer} handleNextQuestion={handleNextQuestion} className={className} />
+      <FinalResult showFinalResult={showFinalResult} correctAnswers={correctAnswers} handleEnd={handleEnd} className={className} />
+      <Waiting waitingState={waitingState} />
+      <ShowResults showResults={showResults} handleSubmit={handleSubmit} text={text} handleChange={handleChange} formValue={formValue} handleOpenAI={handleOpenAI} handleCohere={handleCohere}/>
     </div>
   )
 }
 
-export default GenerateForm
+export default GenerateForms
