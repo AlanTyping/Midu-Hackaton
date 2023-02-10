@@ -1,3 +1,8 @@
+# Co:here AI 🤖
+
+<h2>This, is a project for a hackaton in which we had to use the co:here AI API, and take the creativity to build something interesting</h2>
+<br /><br />
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
