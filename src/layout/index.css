@@ -15,7 +15,6 @@
   box-sizing: border-box;
 }
 
-
 #titulo {
   font-family: Barlow;
   font-size: 3.5rem;
@@ -69,8 +68,8 @@ body {
 .swiper {
   min-width: 250px;
   width: 20%;
+  min-height: 370px;
   height: 60vh;
-  min-height: 400px;
 }
 
 .presentacion {
@@ -611,5 +610,15 @@ body {
 @media (max-width:  1000px) {
   .swiper {
     max-height: 450px;
+  }
+}
+
+@media (max-height: 615px) {
+  .swiper {
+    height: 350px;
+    margin-top: 50px;
+  }
+  #subtitulo {
+    font-size: 1.3rem;
   }
 }
