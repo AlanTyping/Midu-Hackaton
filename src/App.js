@@ -26,6 +26,8 @@ function App() {
     )
   }
 
+  console.log(screen.width)
+
   return (
     <Context.Provider value={[{ setTokenize }, { setGenerate }]}>
       <div className='background h-[100vh] w-[100vw]'>
