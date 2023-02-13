@@ -111,7 +111,7 @@ body {
   }
   .container {
     flex-direction: column;
-    height: 150vh;
+    height: 110vh;
   }
   .form-container {
     width: 100%;
@@ -621,4 +621,11 @@ body {
   #subtitulo {
     font-size: 1.3rem;
   }
+}
+
+@media (max-height: 715px) {
+  .container {
+    flex-direction: column;
+    height: 150vh;
+  }   
 }
