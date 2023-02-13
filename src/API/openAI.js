@@ -28,5 +28,6 @@ export function callApi(text, setFormValue, setShowResults, setWaitingState) {
             setFormValue(responseText);
             setShowResults((results) => !results);
             setWaitingState((a) => a = false);
-        });
+        })
+        .catch(err => alert(err))
 };

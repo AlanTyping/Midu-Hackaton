@@ -100,12 +100,10 @@ function GenerateForms({ decisions, setDecisions }) {
     }
   }, [decisions]);
 
-  const className = 'hover:bg-[rgba(158,197,255,0.2)] border-[rgb(158,197,255)]';
-
   return (
     <div className='h-[100%] w-full flex justify-center items-center flex-col '>
-      <ShowAnswers answerValue={answerValue} showAnswer={showAnswer} handleNextQuestion={handleNextQuestion} className={className} />
-      <FinalResult showFinalResult={showFinalResult} correctAnswers={correctAnswers} handleEnd={handleEnd} className={className} />
+      <ShowAnswers answerValue={answerValue} showAnswer={showAnswer} handleNextQuestion={handleNextQuestion}/>
+      <FinalResult showFinalResult={showFinalResult} correctAnswers={correctAnswers} handleEnd={handleEnd} />
       <Waiting waitingState={waitingState} />
       <ShowResults showResults={showResults} handleSubmit={handleSubmit} text={text} handleChange={handleChange} formValue={formValue} handleOpenAI={handleOpenAI} handleCohere={handleCohere}/>
     </div>

@@ -103,7 +103,6 @@ body {
 @media (max-width: 630px) {
   .waiting {
     font-size: 1.4rem;
-    margin-bottom: 20px;
   }
   .generate {
     height: 110vh;
@@ -144,5 +143,156 @@ body {
   }
   #headerTitle {
     margin-left: 10px;
+  }
+}
+
+/* Responsive para monitores 4k */
+
+@media (min-width: 3000px) {
+
+  /* section 1*/
+
+  #titulo {
+    font-size: 8rem;
+  }
+  #subtitulo {
+    font-size: 5rem;
+    padding-left: 30px;
+  }
+  .swiper {
+    height: 60vh;
+  }
+  .swiper-slide {
+    border: 5px solid #c59eff;
+  }
+  .card h1 {
+    font-size: 5rem;
+    margin-top: 40px;
+  }
+  #card-description {
+    font-size: 4rem;
+    padding: 50px;
+  }
+  .card-button {
+    height: 150px;
+    width: 300px;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    border: 4px solid#c59eff;
+  }
+
+  /* section 2 (tokenize)*/
+
+  .tokenize {
+    justify-content: space-evenly;
+  }
+  .container {
+    width: 100%;
+    min-width: 100%;
+  }
+  .form {
+    max-height: 1200px;
+    height: 70vh;
+    width: 80%;
+  }
+  .form-title {
+    font-size: 5.5rem;
+  }
+  .tokenize-input {
+    height: 130px;
+    width: 80%;
+    font-size: 3rem;
+  }
+  .form-description {
+    margin-top: 40px;
+    font-size: 5.5rem;
+  }
+  .tokenize-area {
+    padding: 40px;
+    font-size: 3.2rem;
+  }
+  #copy {
+    right: 350px;
+    height: 60px;
+    width: 60px;
+  }
+  .tokenize-button {
+    height: 150px;
+    width: 300px;
+    font-size: 3rem;
+    margin-top: 60px;
+  }
+  #tokenize-button-container {
+    width: 85%;
+    margin-top: 80px;
+  }
+
+  /* section 3 (generation)*/
+
+  .title {
+    font-size: 6rem;
+  }
+  #header {
+    height: 180px;
+    border-bottom: 5px solid rgb(158,197,255);;
+  }
+  .generate-button {
+    margin-top: 60px;
+    height: 150px;
+    width: 300px;
+    font-size: 3rem;
+  }
+  .generate-button:hover {
+    font-size: 3.1rem;
+  }
+  #generate-button-container {
+    width: 93%;
+    margin-top: 150px;
+  }
+  .generate-input {
+    margin-top: 40px;
+    font-size: 3rem;
+    height: 130px;
+  }
+  .generate-area {
+    margin-top: 10px;
+    font-size: 3rem;
+  }
+  #answers {
+    font-size: 4rem;
+  }
+  #answer-question {
+    font-size: 3rem;
+  }
+  #answer-result {
+    font-size: 3rem;
+  }
+
+  /* Waiting section */
+
+  #title-waiting-answers {
+    font-size: 7rem;
+  }
+  #description-waiting-answers{
+    font-size: 5rem;
+  }
+  #waiting-gif {
+    height: 1000px;
+    width: 1500px;
+  }
+
+  /* Results section */
+
+  .results-button {
+    height: 150px;
+    width: 300px;
+    font-size: 2.5rem;
+  }
+  #results-info {
+    font-size: 4rem;
+  }
+  #results-results {
+    font-size: 7rem;
+    margin-bottom: 70px;
   }
 }

@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import Button from '../Button';
 import { Context } from '../../App';
 
-const className = 'absolute bottom-2 hover:bg-[rgb(15,35,73)] barlow-family' 
+const className = 'card-button absolute bottom-2 hover:bg-[rgb(15,35,73)] barlow-family' 
 
 function Card({title, description}) {
   const [{ setTokenize }, { setGenerate }] = useContext(Context)
