@@ -39,7 +39,6 @@ function Form({ handleSubmit, text, formValue, handleChange, showResults, handle
                 </form>
             )}
         </div>
-
     )
 }
 

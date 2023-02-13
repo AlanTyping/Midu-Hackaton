@@ -7,7 +7,7 @@ import Button from '../Button.js';
 function Tokenize({ setTokenize }) {
 
   const handleChange = () => setTokenize((tokenize) => !tokenize);
-  const className = ' hover:bg-[rgba(197,158,255,0.2)] tokenize-button'
+  const className = ' hover:bg-[rgba(197,158,255,0.2)] button tokenize-button'
 
   return (
     <div className='background h-[auto] w-[100vw]'>
