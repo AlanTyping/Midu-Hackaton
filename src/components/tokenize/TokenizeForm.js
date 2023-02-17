@@ -32,6 +32,11 @@ function TokenizeForm() {
 
   const handleSubmit = (e) => {
     tokenizeData(text, setFormValue);
+    if (text.text.trim() === '') {
+      alert('Input field cannot be empty');
+      e.preventDefault();
+      return;
+    }
     e.preventDefault();
   };
 

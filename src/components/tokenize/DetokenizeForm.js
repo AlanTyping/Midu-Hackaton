@@ -21,6 +21,11 @@ function DetokenizeForm() {
 
     const handleSubmit = (e) => {
         setArray((array) => array = toNumberArray(text.text));
+        if (text.text.trim() === '') {
+            alert('Input field cannot be empty');
+            e.preventDefault();
+            return;
+          }
         e.preventDefault()
     }
 
