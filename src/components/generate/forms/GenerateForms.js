@@ -93,7 +93,7 @@ function GenerateForms({ decisions, setDecisions }) {
           setCorrectAnswers((answers) => answers + 1);
           setAnswerValue((value) => value = 'Your answer was right!')
         } else {
-          setAnswerValue((value) => value = `Your answer was wrong :') `)
+          setAnswerValue((value) => value = `Your answer was wrong`)
         }
         setShowAnswer((answer) => !answer);
       }

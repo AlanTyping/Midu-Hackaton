@@ -102,6 +102,13 @@ body {
 @media (max-width: 630px) {
   .waiting {
     font-size: 1.4rem;
+    height: 110vh;
+  }
+  #answer {
+    height: 110vh;
+  }
+  #final-result {
+    height: 110vh;
   }
   .generate {
     height: 110vh;
@@ -149,7 +156,7 @@ body {
 
 /* Responsive en mi pantalla */
 
-@media (min-width: 2200px, max-width: 3000px) {
+@media (min-width: 2100px, max-width: 3000px) {
   /* section 1*/
 
   #titulo {
@@ -607,13 +614,16 @@ body {
 
 /* Responsive in phonos */
 
-@media (max-width:  1000px) {
+@media (max-width: 1000px) {
   .swiper {
     max-height: 450px;
   }
 }
 
 @media (max-height: 615px) {
+  .waiting {
+    height: 110vh;
+  }
   .swiper {
     height: 350px;
     margin-top: 50px;
@@ -623,7 +633,10 @@ body {
   }
 }
 
-@media (max-height: 715px) {
+@media (max-height: 605px) {
+  .waiting {
+    height: 110vh;
+  }
   .container {
     flex-direction: column;
     height: 150vh;

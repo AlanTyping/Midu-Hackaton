@@ -5,7 +5,7 @@ export default function Waiting({waitingState}) {
     return (
         <div className='h-[100vh] waiting text-[2rem] absolute top-0 w-[100vw] bg-[rgba(0,0,0,0.8)] flex flex-col items-center justify-center'>
           <h3 id='title-waiting-answers'>Waiting for data</h3>
-          <h4 id='description-waiting-answers' className='mb-[20px]'>Estimated time: 10 seconds{` :')`}</h4>
+          <h4 id='description-waiting-answers' className='mb-[20px]'>Estimated time: 10 seconds</h4>
           <img id='waiting-gif' className='h-[200px] w-[300px] cover' src='https://media.giphy.com/media/W2zHeb2KFvtXugWbJc/giphy-downsized-large.gif'></img>
         </div>
     )
