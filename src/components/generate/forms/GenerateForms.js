@@ -41,6 +41,11 @@ function GenerateForms({ decisions, setDecisions }) {
   }
 
   const handleSubmit = (e) => {
+    if (text.text.trim() === '') {
+      alert('Input field cannot be empty');
+      e.preventDefault();
+      return;
+    }
     randomCall();
     setWaitingState((a) => a = true);
     e.preventDefault();
